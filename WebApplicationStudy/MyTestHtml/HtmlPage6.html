@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>自己的校验</title>
+    <script>
+        function form_validate(thisform) {
+            with (thisform) {
+                if (validateField(txtTel, "非法的电话号码") == false) {
+                    txtTel.focus();
+                    return false;
+                }
+            }
+        }
+        function validateField(txt, string) {
+            with (txt) {
+                if (txt.value != "" && !isNaN(txt.value)) {
+                    var pat = /^1[35678]\d{9}$/
+                    var pat = /^1[34578]\d{9}$/
+                    if (pat.test(txt.value))
+                        return true;
+                }
+
+                alert(string);
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form action="HtmlPage6.html" onsubmit="return form_validate(this)">
+        <label>TEL:</label>
+        <input type="text" size="30" id="txtTel" />
+        <input type="submit" value="submit" />
+    </form>
+</body>
+</html>

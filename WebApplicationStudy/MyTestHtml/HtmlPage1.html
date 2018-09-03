@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
+    <style type="text/css">
+        hr{color:sienna}
+        p{margin-left:20px;color:red}
+        body{background-image:url("../Images/accent.png")}
+    </style>
+</head>
+<body>
+    <p>我是一个段落</p>
+    <p1>我是一个段落1</p1>
+    <div id="app">
+        {{ message }}   
+        <p></p>    
+        {{ message1 }}
+    </div>
+    <div id="app1">
+        {{ message1 }}
+        <p style="color:blue;font-size:20px;">123333333</p>   
+        {{ message }}
+    </div>
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+          message: 'Hello Vue!',
+          message1:'hello matengfei'
+      }
+    })
+    var app1 = new Vue({
+        el: '#app1',
+        data: {
+            message: 'Hello fanfan!',
+            message1: 'hello matengfei'
+        }
+    })
+    </script>
+</body>
+</html>

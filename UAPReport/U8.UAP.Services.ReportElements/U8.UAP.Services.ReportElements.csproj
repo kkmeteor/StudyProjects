@@ -1,0 +1,839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C82C5572-ABA8-4245-90E2-50D1E27F3ED2}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UFIDA.U8.UAP.Services.ReportElements</AssemblyName>
+    <AssemblyOriginatorKeyFile>common.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UFIDA.U8.UAP.Services.ReportElements</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccAuxPath>
+    </SccAuxPath>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/UFIDA.U8.UAP.Services.ReportElements/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics2.Shared.v10.2, Version=10.2.20102.1004, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\U8SOFT\UAP\Infragistics\Infragistics2.Shared.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.Misc.v10.2, Version=10.2.20102.1004, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\U8SOFT\UAP\Infragistics\Infragistics2.Win.Misc.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.UltraWinChart.v10.2, Version=10.2.20102.1004, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\U8SOFT\UAP\Infragistics\Infragistics2.Win.UltraWinChart.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.Win.v10.2, Version=10.2.20102.1004, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\U8SOFT\UAP\Infragistics\Infragistics2.Win.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.U8Login, Version=1.14.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\U8SOFT\Interop\Interop.U8Login.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.UFGeneralFilter, Version=1.13.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="Neodynamic.WinControls.BarcodeProfessional, Version=7.0.2000.0, Culture=neutral, PublicKeyToken=c6b33c3093a0d4cd, processorArchitecture=MSIL">
+      <HintPath>D:\U8SOFT\UAP\Neodynamic.WinControls.BarcodeProfessional.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting">
+      <Name>System.Runtime.Remoting</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="UFIDA.U8.ExpressionEditor.Runtime">
+      <HintPath>D:\U8SOFT\ExpressionEditor\Bin\UFIDA.U8.ExpressionEditor.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.BizDAE.Common">
+      <Name>UFIDA.U8.UAP.Services.BizDAE.Common</Name>
+      <HintPath>..\Assamblys\UFIDA.U8.UAP.Services.BizDAE.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.ExpressionDesigner">
+      <Name>UFIDA.U8.UAP.Services.ExpressionDesigner</Name>
+      <HintPath>..\Assamblys\UFIDA.U8.UAP.Services.ExpressionDesigner.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.ReportChartWizard, Version=6.3.20063.53, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="UFIDA.U8.UAP.Services.ReportColorSet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\U8SOFT\UAP\UFIDA.U8.UAP.Services.ReportColorSet.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.ReportData">
+      <Name>UFIDA.U8.UAP.Services.ReportData</Name>
+      <HintPath>..\..\..\..\..\..\..\Assembly\UFIDA.U8.UAP.Services.ReportData.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.ReportFilterService">
+      <Name>UFIDA.U8.UAP.Services.ReportFilterService</Name>
+      <HintPath>..\Assamblys\UFIDA.U8.UAP.Services.ReportFilterService.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.ReportFunctionsSrv">
+      <Name>UFIDA.U8.UAP.Services.ReportFunctionsSrv</Name>
+      <HintPath>..\Assamblys\UFIDA.U8.UAP.Services.ReportFunctionsSrv.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.ReportResource">
+      <Name>UFIDA.U8.UAP.Services.ReportResource</Name>
+      <HintPath>..\..\..\..\..\..\..\Assembly\UFIDA.U8.UAP.Services.ReportResource.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.U8.Report.BaseDefinition, Version=10.0.0.0, Culture=neutral, PublicKeyToken=68a511f1fc28ba16" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseInterpretor.cs" />
+    <Compile Include="Chart\Chart.cs" />
+    <Compile Include="Chart\ChartService.cs" />
+    <Compile Include="Chart\ChartWizardAdapter.cs" />
+    <Compile Include="Chart\GaugeLayer.cs" />
+    <Compile Include="ClientReportContext.cs" />
+    <Compile Include="Commands\CmdAddCell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdAddSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdBackColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdBorder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdBorderColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdBorderWidth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdCaption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdCaptionAlign.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdChangeZorder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdDeleteCell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdDeleteSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdForeColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdMove.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\cmdRedo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdResize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdResizeSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CmdSizeModeChange.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Command.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\CommandManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\Commands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ICommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\AddArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\BorderSide.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\DataHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\DataSources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\DefaultConfigs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\DescriptionHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\DisplayTextHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\PageMargins.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\Rect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CommonElements\ScriptHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrossInterpretor.cs" />
+    <Compile Include="CrossReportElements\AlgorithmColumnHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrossReportElements\CalculateColumnHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrossReportElements\ColumnHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrossReportElements\Columns.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrossReportElements\CrossService.cs" />
+    <Compile Include="CrossReportElements\CurrentMultiHeaders.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CrossReportElements\MultiHeaders.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\BorderSideTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\ChartWizard\ChartWizardEditor.cs" />
+    <Compile Include="Editor\ChartWizard\ChartWizardTypeConverter.cs" />
+    <Compile Include="Editor\ColorSet\ColorSetEditor.cs" />
+    <Compile Include="Editor\DataSource\DataSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\DataSource\DataSourceEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\DataSource\DataSourceEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\DataSource\DataSourceEditorControl.Designer.cs">
+      <DependentUpon>DataSourceEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\DataSource\DataSourceTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Formula\ExpressionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Formula\ExpressionEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\Formula\Formula.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Formula\FormulaTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Global\GlobalVarient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Global\GlobalVarients.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Global\VarientEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Global\VarientEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\Help\HelpSettingTypeConverter.cs" />
+    <Compile Include="Editor\Help\HelpSetting.cs" />
+    <Compile Include="Editor\Image\ImageEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Image\ImageTypeConvertor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\Indicator\ColorStyleEditor.cs" />
+    <Compile Include="Editor\Indicator\CompareValueControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\Indicator\CompareValueControl.Designer.cs">
+      <DependentUpon>CompareValueControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\Indicator\GaugeTemplateEditor.cs" />
+    <Compile Include="Editor\Indicator\IndicatorDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\Indicator\IndicatorDesign.Designer.cs">
+      <DependentUpon>IndicatorDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\Indicator\NormalGaugeDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\Indicator\NormalGaugeDesign.Designer.cs">
+      <DependentUpon>NormalGaugeDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\PageMarginsTypeConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\PrintOption.cs" />
+    <Compile Include="Editor\RowFilter\RowFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\RowFilter\RowFilterEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\RowFilter\RowFilterTypeConverter.cs" />
+    <Compile Include="Editor\SelfAction\ActionEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\SelfAction\ActionEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\SelfAction\SelfAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\SelfAction\SelfActions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Editor\GroupOption.cs" />
+    <Compile Include="Editor\SortOption.cs" />
+    <Compile Include="Exception\CanceledException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exception\ReportException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exception\ResourceReportException.cs" />
+    <Compile Include="FilterXmlService.cs" />
+    <Compile Include="FreeInterpretor.cs" />
+    <Compile Include="FreeReportElements\AlgorithmCalculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\AlgorithmColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\AlgorithmGroupObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\CalculateColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\CalculateGroupObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridProportionDecimal.cs" />
+    <Compile Include="IndicatorReportElements\CalculateCrossDimension.cs" />
+    <Compile Include="IndicatorReportElements\CalculateGroupDimension.cs" />
+    <Compile Include="IndicatorReportElements\CalculateIndicator.cs" />
+    <Compile Include="FreeReportElements\Calculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\ColumnExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\CommonLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DBBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DBDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DBDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DBExchangeRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DBImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DBText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DecimalAlgorithmCalculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\DecimalAlgorithmColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\Expression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IndicatorReportElements\CalculatorIndicator.cs" />
+    <Compile Include="IndicatorReportElements\CrossDimension.cs" />
+    <Compile Include="IndicatorReportElements\Gauge.cs" />
+    <Compile Include="FreeReportElements\GroupObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IndicatorReportElements\GroupDimension.cs" />
+    <Compile Include="IndicatorReportElements\Indicator.cs" />
+    <Compile Include="IndicatorReportElements\IndicatorMetrix.cs" />
+    <Compile Include="FreeReportElements\Label.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FreeReportElements\SimpleLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridInterpretor.cs" />
+    <Compile Include="GridReportElements\GridAlgorithmColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridCalculateColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridColumnExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridDecimalAlgorithmColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridExchangeRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\GridLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportData\ABData.cs" />
+    <Compile Include="ReportData\ChartSchema.cs" />
+    <Compile Include="ReportData\GroupSchema.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\GroupSchemaItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\GroupSchemaItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\GroupSchemas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\Labels.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GridReportElements\SuperLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Cell.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Drawing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IAlgorithm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ICalculateColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ICalculateSequence.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ICalculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IDataSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IExchangeRate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IGridCollect.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IGroupHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IMapName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IMultiHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IRowFilter.cs" />
+    <Compile Include="Interfaces\ISection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ISort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LevelExpand\CachePool.cs" />
+    <Compile Include="LevelExpand\Enum.cs" />
+    <Compile Include="LevelExpand\LevelExpandData.cs" />
+    <Compile Include="LevelExpand\LevelExpandDataTable.cs" />
+    <Compile Include="LevelExpand\LevelExpandItem.cs" />
+    <Compile Include="LevelExpand\LevelExpandItemCollection.cs" />
+    <Compile Include="LevelExpand\LevelExpandSchema.cs" />
+    <Compile Include="LevelExpand\LevelExpandSrv.cs" />
+    <Compile Include="LevelExpand\NameDataSetCollection.cs" />
+    <Compile Include="LevelExpand\ReportLevelExpand.cs" />
+    <Compile Include="LevelExpand\ReportLevelExpandCollection.cs" />
+    <Compile Include="LevelExpand\SerializeHelper.cs" />
+    <Compile Include="LevelExpand\XMLSchema\Altova\Altova.cs" />
+    <Compile Include="LevelExpand\XMLSchema\Altova\Document.cs" />
+    <Compile Include="LevelExpand\XMLSchema\Altova\Node.cs" />
+    <Compile Include="LevelExpand\XMLSchema\Altova\SchemaExceptions.cs" />
+    <Compile Include="LevelExpand\XMLSchema\Altova\SchemaTypeFactory.cs" />
+    <Compile Include="LevelExpand\XMLSchema\Altova\SchemaTypes.cs" />
+    <Compile Include="LevelExpand\XMLSchema\DesignTimeExpandItemsType.cs" />
+    <Compile Include="LevelExpand\XMLSchema\LevelExpandItemType.cs" />
+    <Compile Include="LevelExpand\XMLSchema\LevelExpandSchemaDoc.cs" />
+    <Compile Include="LevelExpand\XMLSchema\LevelExpandSchemaType.cs" />
+    <Compile Include="LevelExpand\XMLSchema\ReportLevelExpandsType.cs" />
+    <Compile Include="LevelExpand\XMLSchema\ReportLevelExpandType.cs" />
+    <Compile Include="ReportData\ClientReportDataSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\CurrentValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\Group.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\Groups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\GroupSchemas.XmlHelper.cs" />
+    <Compile Include="ReportData\NullValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportData\QuickLocationItem.cs" />
+    <Compile Include="ReportData\ReportDataSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RemoteDataHelper.cs" />
+    <Compile Include="ReportData\QuickSortItem.cs" />
+    <Compile Include="ReportData\QuickSortItemCollection.cs" />
+    <Compile Include="ReportData\QuickSortSchema.cs" />
+    <Compile Include="ReportData\ReportSummaryData.cs" />
+    <Compile Include="ReportData\RowData.cs" />
+    <Compile Include="ReportData\SemiRow.cs" />
+    <Compile Include="ReportData\SemiRows.cs" />
+    <Compile Include="ReportEngine.cs" />
+    <Compile Include="ReportHandler.cs" />
+    <Compile Include="ReportUIUserState.cs" />
+    <Compile Include="Rows\GroupHeaderRow.cs" />
+    <Compile Include="Rows\GroupRow.cs" />
+    <Compile Include="Rows\IndictorDetailBuilder.cs" />
+    <Compile Include="Rows\Row.cs" />
+    <Compile Include="Rows\Rows.cs" />
+    <Compile Include="Rows\RuntimeRows.cs" />
+    <Compile Include="Rows\SemiRowsContainer.cs" />
+    <Compile Include="RuntimeFormat\IRuntimeFormatArg.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormat.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatArgAbstract.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatArgColSummaryType.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatArgDynamicDataSourceCol.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatInfo.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatServerContext.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatException.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatGridColumn.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatGroupFormat.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatGroupLevel.cs" />
+    <Compile Include="RuntimeFormat\RuntimeFormatGroupStyle.cs" />
+    <Compile Include="Sections\Report.ConfigColumnVisibleHelper.cs" />
+    <Compile Include="Sections\Report.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\SectionLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\SectionLines.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\SequenceCells.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\Cells.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\CrossColumnHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\CrossDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\CrossRowHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\Detail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\GridDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\GroupHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\GroupSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\GroupSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\PageFooter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\PageHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\PageSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\PageTitle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\ReportHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\ReportSummary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\Section.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\Sections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sections\SelectedCells.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Editor\DataSource\DataSourceEditorControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataSourceEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\Formula\ExpressionEditorForm.resx">
+      <DependentUpon>ExpressionEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\Global\VarientEditorForm.resx">
+      <DependentUpon>VarientEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\Indicator\CompareValueControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CompareValueControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\Indicator\IndicatorDesign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IndicatorDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\Indicator\NormalGaugeDesign.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NormalGaugeDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\RowFilter\RowFilterEditorForm.resx">
+      <DependentUpon>RowFilterEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\SelfAction\ActionEditorForm.resx">
+      <DependentUpon>ActionEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="common.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sections\DefaultFooterConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath) " "D:\U8SOFT\UAP"
+
+
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

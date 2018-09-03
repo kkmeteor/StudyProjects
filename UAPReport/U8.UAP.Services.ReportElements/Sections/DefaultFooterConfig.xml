@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Section Name="ReportSummary" Type="PageFooter" Height="98" Caption="页脚区" IdentityCaption="">
+  <Control Name="Drawing143730" Type="CommonLabel" X="9" Y="40" Width="40" Height="20" Caption="单位:" CaptionTW="單位:" CaptionEN="Unit:" IdentityCaption="" />
+  <Control Name="Drawing143731" Type="Expression" X="53" Y="40" Width="164" Height="20" Caption="GetCopritionName()" IdentityCaption="" />
+  <Control Name="Drawing143732" Type="CommonLabel" X="268" Y="40" Width="46" Height="20" Caption="制表:" CaptionTW="製錶:"  CaptionEN="Tabulation:" IdentityCaption="" />
+  <Control Name="Drawing143733" Type="Expression" X="316" Y="40" Width="87" Height="20" Caption="GetUserName()" IdentityCaption="" />
+  <Control Name="Drawing143736" Type="CommonLabel" X="427" Y="62" Width="106" Height="20" Caption="【用友】 第" CaptionTW="【用友】 第" CaptionEN="[UFIDA]  Page" IdentityCaption="" />
+  <Control Name="Drawing143734" Type="CommonLabel" X="493" Y="40" Width="66" Height="20" Caption="打印日期:" CaptionTW="列印日期:" CaptionEN="Date of print:" IdentityCaption="" />
+  <Control Name="Drawing143737" Type="Expression" X="535" Y="62" Width="22" Height="20" Caption="page()" IdentityCaption="" />
+  <Control Name="Drawing143738" Type="CommonLabel" X="559" Y="62" Width="45" Height="20" Caption="页,共" CaptionTW="頁,共" CaptionEN="of" IdentityCaption="" />
+  <Control Name="Drawing143735" Type="Expression" X="565" Y="40" Width="84" Height="20" Caption="Date()" IdentityCaption="" />
+  <Control Name="Drawing143739" Type="Expression" X="606" Y="62" Width="23" Height="20" Caption="pages()" IdentityCaption="" />
+  <Control Name="Drawing143740" Type="CommonLabel" X="630" Y="62" Width="19" Height="20" Caption="页"  CaptionTW="頁" CaptionEN="Pages in total" IdentityCaption="" />
+</Section>

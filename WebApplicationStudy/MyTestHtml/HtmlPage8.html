@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        document.write(Date());
+    </script>
+    <p>Hello World!</p>
+
+    <div id="main">
+        <p>The DOM is very useful.</p>
+        <p>本例演示 <b>getElementsByTagName</b> 方法。</p>
+        <p>我是第三段文字描述！</p>
+    </div>
+    <div id="image">
+        <img src="../Images/eg_bulboff.gif" id="image1" />
+        <input type="button" id="btn1" value="改变图片" onclick="btnClick()" />
+        <b></b>
+        <p id="pp" onclick="this.innerHTML='谢谢!'">这里有一段文本！</p>
+    </div>
+    <script>
+        var x = document.getElementById("main");
+        var y = x.getElementsByTagName("p");
+        document.write('<p>id 为 "main" 的 div 中的第一段文本是：' + y[0].innerHTML+'</p>');
+        for (var i = 0; i < y.length; i++) {
+            document.write("<p>id 为 main 的 div 中的文本列表是" + y[i].innerHTML + '</p>');
+        }
+        y[0].onclick = "displayDate()";
+        function displayDate() {
+
+            p1 = document.getElementById("pp");
+            p1.innerHTML = Date();
+        }
+        document.write(Date());
+        function btnClick() {
+            x = document.getElementById("image1");
+            if (x.src.match("bulbon")) {
+                x.src = "../Images/eg_bulboff.gif";
+            }
+            else {
+                x.src = "../Images/eg_bulbon.gif";
+            }
+            mn = document.getElementById("main");
+            nn = mn.getElementsByTagName("p");
+            nn[0].style.color = "red"
+            p1 = document.getElementById("pp");
+            if (pp.style.visibility == 'hidden')
+                pp.style.visibility = "visible"
+            else
+                pp.style.visibility = "hidden"
+        }
+    </script>
+
+</body>
+</html>

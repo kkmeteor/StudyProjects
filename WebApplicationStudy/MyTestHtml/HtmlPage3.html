@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css" />
+
+</head>
+<body onload="message()">
+    <script type="text/javascript">
+    document.write('<p>my first js test!<p>')
+    </script>
+    <script type="text/javascript">
+    document.write('<h1>matengfei</h1>')
+    document.write('<p>zhangfan</p>')
+    </script>
+
+    <button type="button" id="btn1" value="按钮" onclick="btnClick()">按钮</button>
+    <p id="time"></p>
+    <p id="p1">如果您点击我，我会消失。</p>
+    <p>点击我，我会消失。</p>
+    <p>也要点击我哦。</p>
+    <script type="text/javascript">
+        function btnClick() {
+            alert('btn clicked!')
+            el = document.getElementById("btn1");
+            el.innerHTML = "改变后的按钮";
+            tx = document.getElementById("p1");
+            tx.innerHTML = "333333333";
+            
+            tx.onclick = function () { pClick() };
+        }
+        function pClick() {
+            alert("11111");
+        }
+        function CheckDate(s)
+        {
+            if (s < 10)
+                return "0" + s;
+            else
+                return s;
+        }
+    </script>
+    <p1>这里是正文部分！</p1>
+    <script type="text/javascript">
+    function message() {
+        console.log('OnLoad方法开始!')
+        console.log('OnLoad方法结束!')
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        h = CheckDate(h);
+        m = CheckDate(m);
+        s = CheckDate(s);
+        x = document.getElementById("time");
+        x.innerHTML = h + ":" + m + ":" + s;
+        timedCount();
+    }
+    var c = 0
+    var t
+    function timedCount() {
+        document.getElementById('txt').value = c
+        c = c + 1
+        t = setTimeout("timedCount()", 1000)
+    }
+    function stopCount() {
+        clearTimeout(t);
+    }
+    </script>
+    <br />
+    <input type="button" value="Start count!" onclick="timedCount()">
+    <br />
+    <input type="button" value="Stop count!" onclick="stopCount()">
+    <br />
+    <input type="text" id="txt">
+</body>
+</html>

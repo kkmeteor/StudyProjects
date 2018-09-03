@@ -1,0 +1,78 @@
+﻿<html>
+<body>
+
+    <div id="body1">
+
+        <p id="intro" style="background-color:blue">Hello World!</p>
+        <p id="intro1" style="background-color:yellow">Hello World!</p>
+    </div>
+    <script type="text/javascript">
+        x = document.getElementById("intro");
+        y = document.getElementById("intro1");
+        document.getElementById("intro").style.backgroundColor = "red";
+        document.write("<p style='background-color:green'>"+x.firstChild.nodeValue+"</p>");
+        var p1 = document.createElement("p");
+        var t1 = document.createTextNode("new data");
+        p1.appendChild(t1);
+        
+        var ele = document.getElementById("body1");
+        //ele.removeChild(y);
+        y.parentNode.replaceChild(p1, y);
+    </script>
+    <div id="d1" style="background-color:lightgreen;width:200px;height:100px" onclick="divClick()" 
+         onmouseover="divOver()" onmouseout="divOut()">
+        <p id="p1" style="text-align:center">Clicke me</p>
+    </div>
+    <script>
+        var i = 0;
+        function divClick() {
+            var div1 = document.getElementById("d1");
+            if (i == 0) {
+                var p2 = document.createElement("p");
+                p2.style.textAlign = "center";
+                var t2 = document.createTextNode("Click Me Again!")
+                p2.appendChild(t2);
+                div1.appendChild(p2);
+            }
+            else if (i == 1) {
+                var p3 = document.createElement("p");
+                p3.style.textAlign = "center";
+                var t3 = document.createTextNode("And Again!")
+                p3.appendChild(t3);
+                div1.appendChild(p3);
+            }
+            else if (i == 2) {
+                m = div1.childNodes.length;
+                for (j = 0; j < m; j++) {
+                    div1.removeChild(div1.childNodes[0]);
+                }
+                var p4 = document.createElement("p");
+                p4.style.textAlign = "center";
+                var t4 = document.createTextNode("Thank you!")
+                p4.appendChild(t4);
+                div1.appendChild(p4);
+            }
+            else if (i == 3) {
+                var x = div1.childNodes[0];
+                x.innerHTML = "Good Bye!";
+            }
+            else if (i == 4) {
+                var y = document.getElementById("d1");
+                y.parentNode.removeChild(y);
+            }
+            i++;
+        }
+        function divOver() {
+
+            var div1 = document.getElementById("d1");
+            div1.style.backgroundColor = "yellow";
+        }
+        function divOut() {
+
+            var div1 = document.getElementById("d1");
+            div1.style.backgroundColor = "lightgreen";
+        }
+    </script>
+
+</body>
+</html>

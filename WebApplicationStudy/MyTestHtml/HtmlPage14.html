@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <p id="demo"></p>
+
+    <p id="demo1"></p>
+    <script>
+        var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+        var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+        x = document.getElementById("demo1");
+        x.innerHTML = "浏览器的内部窗口宽度：" + w + "，高度：" + h + "。"
+    </script>
+
+
+
+    <script>
+        var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+        var h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight;
+
+        x = document.getElementById("demo");
+        x.innerHTML = "浏览器的内部窗口宽度：" + w + "，高度：" + h + "。" + "<br/>"
+    </script>
+    <input type="button" id="btn1" width="40" value="打开新窗口" /><br />
+    <script>
+        x = document.getElementById("btn1");
+        x.onclick = btnClick;
+        function btnClick() {
+            //window.moveTo(100, 100);
+            //window.close();
+            //window.resizeTo(600, 800);
+            //window.open("http://www.w3school.com.cn/js/js_window.asp");
+            //x = document.getElementById("demo1");
+            //x.innerHTML = "你屏幕的可用宽度为：" + screen.availWidth + "<br/>" + "你屏幕的可用高度为：" + screen.availHeight+"<br/>";
+            location.assign("htmlpage1.html");
+        }
+        document.write("location.hostname : " + location.hostname + "<br/>");
+        document.write("location.pathname : " + location.pathname + "<br/>");
+        document.write("location.port : " + location.port + "<br/>");
+        document.write("location.protocol : " + location.protocol + "<br/>");
+    </script>
+
+    <script>
+        function goBack() {
+            window.history.back()
+        }
+        function goForward() {
+            history.forward();
+        }
+        function myAlert() {
+            var t = setTimeout(myConfirm, "5000");
+            var t1 = setTimeout(myPrompt, "3000");
+            var t2 = setTimeout("alert('我的警告框！')", 1000);
+            alert("我的警告框！")
+        }
+        function myConfirm() {
+            var b1 = confirm("我的确认框！")
+            if(b1) alert("yes")
+            
+            else alert("no")
+        }
+        function myPrompt() {
+            var s1 = prompt("我的提示框", "aaa");
+            alert(s1);
+        }
+    </script>
+    <input type="button" value="Back" onclick="goBack()">
+    <input type="button" value="Forward" onclick="goForward()">
+    <input type="button" value="警告框" onclick="myAlert()">
+    <input type="button" value="确认框" onclick="myConfirm()">
+    <input type="button" value="提示框" onclick="myPrompt()">
+</body>
+</html>

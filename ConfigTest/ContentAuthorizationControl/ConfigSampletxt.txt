@@ -1,0 +1,8 @@
+﻿<Contents>
+	<Content Id="" DeptId = "">
+		<!--Type接受Allow或Deny两个字符串-->
+		<!--空白或英文星号代表全部-->
+		<Authorization Type="Allow" Role="" UserId="" DeptId=""/>
+		<Authorization Type="Deny" Role="" UserId="" DeptId=""/>
+	</Content>
+</Contents>

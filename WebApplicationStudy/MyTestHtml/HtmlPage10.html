@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>JS 对象</title>
+    <script src="../Scripts/js1.js"></script>
+</head>
+<body>
+    <script>
+        var person = new Object();
+        person.Name = "MaTengfei";
+        person.Age = 19;
+        person.EyeColor = "black";
+        var person1 = { Name: "Zhangfan", Age: 18, EyeColor: "red" };
+        document.write("<p>" + person.Name + person1.Name + "</p>")
+        var p1 = new Person("Ma", "Yutong", 6);
+        document.write("<p>" + p1.firstname + p1.lastname + "age:" + p1.age + "</p>")
+        p1.Sex = "Female";
+        p1.changeName("Xiaotian");
+        p1.changeFirstName("Zhang");
+        document.write("<p>" + p1.firstname + p1.lastname + " age:" + p1.age + " Sex:" + p1.Sex + "</p>")
+        text=""
+        for(x in p1)
+        {
+            text += p1[x];
+        }
+        document.write(text);
+    </script>
+    <noscript>本页面需要开启脚本才能够正常浏览!</noscript>
+</body>
+</html>

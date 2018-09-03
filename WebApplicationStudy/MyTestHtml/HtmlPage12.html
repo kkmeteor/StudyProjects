@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>显示时钟</title>
+
+    <script src="../Scripts/jquery-1.8.2.js"></script>
+    <script>
+        function startTime() {
+            var day = new Date();
+            day.setFullYear(2017, 7, 1);
+            var today = new Date()
+            var h = today.getHours()
+            var m = today.getMinutes()
+            var s = today.getSeconds()
+            var datespan = today - day;
+            datespan = Math.abs(datespan);
+            $("#txt2").html(datespan).attr("style","color:red");
+            //document.getElementById("txt2").innerHTML = datespan;
+            // add a zero in front of numbers<10
+            m = checkTime(m)
+            s = checkTime(s)
+            $("#txt").html(h + ":" + m + ":" + s).attr("style", "color:blue");
+            //document.getElementById('txt').innerHTML = h + ":" + m + ":" + s
+            t = setTimeout('startTime()', 500)
+        }
+
+        function checkTime(i) {
+            if (i < 10)
+            { i = "0" + i }
+            return i
+        }
+        $(document).ready(startTime());
+    </script>
+</head>
+
+<body>
+    <div id="txt"></div>
+    <div id="txt2"></div>
+</body>
+</html>

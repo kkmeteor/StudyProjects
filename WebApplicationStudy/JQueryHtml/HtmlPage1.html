@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>标题而已</title>
+    <script src="../Scripts/jquery-1.8.2.js"></script>
+    <script>
+        onerror=handlererror;
+        function myFunction() {
+            $("#h01").html("Hello jQuery").attr("style","color:red");
+            $("p").click(function(){
+                $(this).hide();
+            })
+        }
+        $(document).ready(function () {
+            $("#h01").html("Hello jQuery").attr("style", "color:red");
+            $("p").click(function () {
+                $(this).hide();
+            });
+            $("#btn1").click(function () {
+                $(".test").hide();
+                alertddd("error");
+            })
+            $("#btn2").click(function () {
+                if ($(this).css("color") == 'rgb(255, 0, 0)')
+                    $(this).attr("style", "color:blue");
+                else
+                    $(this).attr("style", "color:rgb(255,0,0)");
+            })
+        });
+        function handlererror(msg, url, l) {
+            txt = "本页中存在错误。\n\n"
+            txt += "错误：" + msg + "\n"
+            txt += "URL: " + url + "\n"
+            txt += "行：" + l + "\n\n"
+            txt += "点击“确定”继续。\n\n"
+            alert(txt)
+            return true
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="h01"></h1>
+    <button id="btn1" type="button" class="test">请点击我1</button>
+    <button id="btn2" type="button" style="color:red">请点击我2</button>
+    <p class="test">如果您点击我，我会消失。</p>
+    <p>点击我，我会消失。</p>
+    <p>也要点击我哦。</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<html>
+<head title="submitpage">
+    <script src="../Scripts/submit.js"></script>
+    <script>
+        function validate_required(field, alerttxt) {
+            with (field) {
+                if (!checkEmail(field.value)) {
+                    return false
+                }
+                else {
+                    return true
+                }
+            }
+        }
+
+        function validate_form(thisform) {
+            with (thisform) {
+                if (validate_required(email, "Email must be filled out!") == false)
+                { email.focus(); return false }
+            }
+        }
+        function isEmail(strEmail) {
+            if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
+                return true;
+            else
+                return false;
+        }
+        function checkEmail(strEmail) {
+            var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+            if (!reg.test(strEmail))
+                return false;
+            else
+                return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="submitpage.html" onsubmit="return validate_form(this)" method="post">
+        Email: <input type="text" name="email" size="30">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

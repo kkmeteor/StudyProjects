@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D3D1810-558F-4321-8419-52BC6EE8E35C}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>UFIDA.U8.UAP.Services.ReportData</AssemblyName>
+    <AssemblyOriginatorKeyFile>common.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UFIDA.U8.UAP.Services.ReportData</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccAuxPath>
+    </SccAuxPath>
+    <PublishUrl>http://localhost/UFIDA.U8.UAP.Services.ReportData/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;UpGradeTool</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.U8ColAuthsvr, Version=3.2.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="Interop.U8Login, Version=1.14.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\U8SOFT\Interop\Interop.U8Login.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.BizDAE.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="UFIDA.U8.UAP.Services.BizDAE.ConfigureServicesRpt, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="UFIDA.U8.UAP.Services.BizDAE.ServicesProxy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="UFIDA.U8.UAP.Services.ReportDataIRuntimeMyReport, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="UFIDA.U8.UAP.Services.ReportElements, Version=1.0.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL" />
+    <Reference Include="UFIDA.U8.UAP.Services.ReportFilterService">
+      <Name>UFIDA.U8.UAP.Services.ReportFilterService</Name>
+      <HintPath>D:\Assembly\UFIDA.U8.UAP.Services.ReportFilterService.dll</HintPath>
+    </Reference>
+    <Reference Include="UFIDA.U8.UAP.Services.ReportResource">
+      <Name>UFIDA.U8.UAP.Services.ReportResource</Name>
+      <HintPath>D:\Assembly\UFIDA.U8.UAP.Services.ReportResource.dll</HintPath>
+    </Reference>
+    <Reference Include="UFSoft.U8.Framework.SecurityCommon, Version=8.50.0.0, Culture=neutral, PublicKeyToken=79a4e7ad54eeabca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\U8SOFT\Framework\UFSoft.U8.Framework.SecurityCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Altova\Altova.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Altova\Document.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Altova\Node.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Altova\SchemaExceptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Altova\SchemaTypeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Altova\SchemaTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\Encrypt.cs" />
+    <Compile Include="Common\Enum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\ReportDataException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\SqlHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\U8LoginInfor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignTimePublish\DesignTimePublishEngine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportAuth\AuthCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAuth\AuthEnum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAuth\ReportAuth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAuth\ReportAuthException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAuth\ViewAuth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportAuth\ViewCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportDataFacade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportListService\ReportListService.AllUapReportIdsLoader.cs" />
+    <Compile Include="ReportListService\ReportListService.cs" />
+    <Compile Include="ReportLoginManager.cs" />
+    <Compile Include="ReportMeta\ComplexView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMeta\ExpandProgram.cs" />
+    <Compile Include="ReportMeta\ReportDefinition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMeta\ReportRelateInfor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMeta\SimpleView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportMeta\SimpleViewCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportQueryXml\ParamterType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportQueryXml\ReportQueryXmlDoc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportQueryXml\ReportQueryXmlType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReportQueryXml\StoreProcType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RowAuth\IRowAuthColPicker.cs" />
+    <Compile Include="RowAuth\RowAuthContext.cs" />
+    <Compile Include="RowAuth\RowAuthFacade.cs" />
+    <Compile Include="RowAuth\RowAuthPickerAbstract.cs" />
+    <Compile Include="RowAuth\RowAuthPickerCustomer.cs" />
+    <Compile Include="RowAuth\RowAuthPickerDepartment.cs" />
+    <Compile Include="RowAuth\RowAuthPickerInventory.cs" />
+    <Compile Include="RowAuth\RowAuthPickerPerson.cs" />
+    <Compile Include="RowAuth\RowAuthPickerVendor.cs" />
+    <Compile Include="RowAuth\RowAuthPickerWareHouse.cs" />
+    <Compile Include="RunTimeMyReport\DynamicReport.cs" />
+    <Compile Include="RunTimeMyReport\IOpenReportCenterNode.cs" />
+    <Compile Include="RunTimeMyReport\ReportCenterDataService.cs" />
+    <Compile Include="RunTimeMyReport\ReportCenterNode.cs" />
+    <Compile Include="RunTimeMyReport\ReportCenterObjAssembler.cs" />
+    <Compile Include="RunTimeMyReport\ReportCenterUiStateHandler.cs" />
+    <Compile Include="RunTimeMyReport\ReportNode.cs" />
+    <Compile Include="RunTimeMyReport\StandardReportMenuRuleHandler.cs" />
+    <Compile Include="RunTimeMyReport\StaticReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunTimeMyReport\IFillData.cs" />
+    <Compile Include="RunTimePublish\PublishData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunTimePublish\PublishDataMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunTimePublish\PublishDataTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunTimePublish\PublishDataService.cs" />
+    <Compile Include="RunTimePublish\ReportMeta4Publish.cs" />
+    <Compile Include="RunTimePublish\U8User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RunTimePublish\ViewInfo4Publish.cs" />
+    <Compile Include="RunTimeSaveAs\RunTimeSaveAsService.cs" />
+    <Compile Include="ServiceForBMP\ReportInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ServiceForBMP\ReportInfoList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TempDBService\AbtractSqlFieldDefinition.cs" />
+    <Compile Include="TempDBService\Base2TempTable.cs" />
+    <Compile Include="TempDBService\CreateTableFromReader.cs" />
+    <Compile Include="TempDBService\CustomDataSource2TempTable.cs" />
+    <Compile Include="TempDBService\ILevelExpandTempDBGetDataService.cs" />
+    <Compile Include="TempDBService\ISqlFieldDefinition.cs" />
+    <Compile Include="TempDBService\I2TempTable.cs" />
+    <Compile Include="TempDBService\LevelExpandTempDBCreateTable.cs" />
+    <Compile Include="TempDBService\LevelExpandTempDBHashTableToColumnService.cs" />
+    <Compile Include="TempDBService\LevelExpandTempDBManager.cs" />
+    <Compile Include="TempDBService\LevelExpandTempDBProduceDataTable.cs" />
+    <Compile Include="TempDBService\SqlCommandHelper.cs" />
+    <Compile Include="TempDBService\SqlFieldDefinitionManager.cs" />
+    <Compile Include="TempDBService\SqlFieldDefinitionNoLength.cs" />
+    <Compile Include="TempDBService\SqlFieldDefinitionOneLength.cs" />
+    <Compile Include="TempDBService\SqlFieldDefinitionTwoLength.cs" />
+    <Compile Include="TempDBService\TempDBServiceException.cs" />
+    <Compile Include="TempDBService\U8DataEngine2TempTable.cs" />
+    <Compile Include="TempDBService\U8DataEngineHelper.cs" />
+    <Compile Include="UpgradeReport872\IUpgradeItem.cs" />
+    <Compile Include="UpgradeReport872\Upgrade872Controller.cs" />
+    <Compile Include="UpgradeReport872\UpgradeFormatService.cs" />
+    <Compile Include="UpgradeReport872\UpgradeReportMetaWrapper.cs" />
+    <Compile Include="UpgradeReport\ConvertDataToBO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\DataSourceInfor.cs" />
+    <Compile Include="UpgradeReport\DispartSqlSelect.cs" />
+    <Compile Include="UpgradeReport\MendWhenUpgrading.cs" />
+    <Compile Include="UpgradeReport\ReportLocaleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\ReportLocaleInfoCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\ReportViewLocaleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\ReportViewLocaleInfoCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\SaveDataSourceEngine.cs" />
+    <Compile Include="UpgradeReport\UpGrade.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\UpgradeExportReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\UpgradeReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\UpgradeReportView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\UpgradeReportViewCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\UpgradeSqlProducer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpgradeReport\ViewLevelExpandSrv.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="common.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" "D:\u8soft\uap"
+
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

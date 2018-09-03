@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <img src="../Images/eg_bulboff.gif" id="closeLight" onclick="imgClick()" />
+    <p id="p1">点击灯泡来点亮或熄灭这盏灯</p>
+    <script>
+        function imgClick() {
+            //img = document.getElementById("closeLight");
+            //img.src = "../Images/eg_bulbon.gif";
+            element = document.getElementById("closeLight")
+            if (element.src.match("bulboff")) {
+                element.src = "../Images/eg_bulbon.gif";
+            }
+            else {
+                element.src = "../Images/eg_bulboff.gif";
+            }
+            p = document.getElementById("p1");
+            if (p.style.color != "rgb(255, 0, 0)")
+                p.style.color = "rgb(255, 0, 0)"
+            else
+                p.style.color = "#3300FF";
+        }
+        function click() {
+            x= document.getElementById("image");
+            if(x.src.match("bridge")){
+                x.src = "/i/eg_tulip.jpg";
+            }
+            else{
+    
+                x.src = "/i/shanghai_lupu_bridge.jpg";
+            }
+
+        }
+    </script>
+    <p id="p3">我是一段即将被改变的文字</p>
+    <h2>验证数字</h2>
+
+    <input type="button" value="点击我" id="btn1" onclick="click()" />
+    <input id="txtNum" type="text" onblur="btnClick()"/>请输入一个数字，如果不是数字，将弹出提示。<br />
+    <input id="btn1" type="button" value="验证" onclick="btnClick()"/><br />
+    <script>
+        function btnClick() {
+            text = document.getElementById("txtNum");
+            var value = text.value;
+            if (value == "" || isNaN(value))
+            {
+                alert("Not Numeric");
+            }
+        }
+    </script>
+    <input id="btn2" type="button" value="加载外部JS" onclick="btnClick1()" /><br />
+    <script src="../Scripts/myscript.js"></script>
+    <input id="btn11" type="button" value="我是一个button" onclick="sayHello('Harry Potter','Wizard')"/><br />
+    <input id="num1" type="text" value="2" onblur="checkNum('num1')" />请输入一个数字1<br />
+    <input id="num2" type="text" value="3" onblur="checkNum('num2')" />请输入一个数字2<br />
+    <button id="btn3" onclick="myFunction(document.getElementById('num1').value, document.getElementById('num2').value)">请点击我</button><br />
+
+    <div class="form-group">
+        <label class="control-label visible-ie8 visible-ie9">手机号</label>
+        <div class="input-icon">
+            <input class="form-control placeholder-no-fix" type="text"
+                   autocomplete="off" placeholder="请输入手机号" name="name" style="height: 34px;" id="phone" onblur="upperCase()">
+        </div>
+        <input class="form-control placeholder-no-fix" id="btn5" type="button" value="显示星期几" onclick="GetDay()" />
+    </div>
+    <script>
+        function checkNum(controlId) {
+            text = document.getElementById(controlId);
+            var value = text.value;
+            if (value == "" || isNaN(value)) {
+                alert(controlId + "Not Numeric");
+            }
+        }
+    </script>
+</body>
+</html>

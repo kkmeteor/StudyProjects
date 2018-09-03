@@ -1,0 +1,43 @@
+using System;
+using System.ComponentModel;
+
+namespace UFIDA.U8.UAP.Services.ReportElements
+{
+	/// <summary>
+	/// Formula 的摘要说明。
+	/// </summary>
+	[TypeConverterAttribute(typeof(FormulaTypeConverter))]
+	public class Formula
+	{
+		private FormulaType _type=FormulaType.Filter;
+		private string _formulastring=""; 
+		public Formula()
+		{			
+		}
+
+		public FormulaType Type
+		{
+			get
+			{
+				return _type;
+			}
+			set
+			{
+				_type=value;
+			}
+		}
+
+		[Editor(typeof(ExpressionEditor), typeof(System.Drawing.Design.UITypeEditor))]
+		public string FormulaExpression
+		{
+			get
+			{
+				return _formulastring;
+			}
+			set
+			{
+				_formulastring=value;
+			}
+		}
+	}
+}

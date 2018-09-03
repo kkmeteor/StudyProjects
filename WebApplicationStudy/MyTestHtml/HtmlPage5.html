@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="../Scripts/html5.js"></script>
+    <script>
+var txt="";
+function message()
+{
+try
+  {
+  alert("Welcome guest!");
+  }
+catch(err)
+  {
+  txt="There was an error on this page.\n\n";
+  txt+="Error description: " + err.message + "\n\n";
+  txt+="Click OK to continue.\n\n";
+  alert(txt);
+  }
+}
+    </script>
+</head>
+
+<body>
+    <input type="button" value="View message" onclick="message()">
+    <h1>请输入一个5到10之间的数字</h1>
+    <input type="text" id="text1" onblur="check1()" />
+</body>
+
+</html>

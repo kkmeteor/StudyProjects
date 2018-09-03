@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <p id="intro">Hello World!</p>
+    <p id="p1">本例演示 <b>getElementById</b> 方法！</p>
+
+    <script>
+        x = document.getElementById("intro");
+        document.write('<p>id="intro" 的段落中的文本是：' + x.innerHTML + '</p>');
+        x = document.getElementById('p1');
+        x.style.font = '19px';
+        x = document.getElementById("intro");
+        x.innerHTML = "我是新的文本了";
+        x.style.fontSize = '28px';
+        document.write('<p> id ="intro" 的文本现在是：' + x.innerHTML + '</p>');
+    </script>
+</body>
+</html>

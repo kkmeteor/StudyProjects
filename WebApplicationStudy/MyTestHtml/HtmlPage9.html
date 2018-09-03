@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>动态添加事件</title>
+    <h1 id="h1">我是一个标题，但是可以点击我</h1>
+    <script>
+        y = document.getElementById("h1");
+        y.onclick = function () { onClick() };
+        function onClick() {
+            y.style.color = "red";
+        }
+        function bodyLoad() {
+            console.log("begin loadBody");
+            var str="";
+            str += "浏览器的代码名:" + navigator.appCodeName+"<br>";
+            str += "浏览器的次级版本:" + navigator.appMinorVersion + "<br>";
+            str += "浏览器的名称:" + navigator.appName + "<br>";
+            str += "浏览器的平台和版本信息:" + navigator.browserLanguage + "<br>";
+            str += "浏览器的操作系统平台:" + navigator.platform + "<br>";
+            str += "浏览器的OS 使用的默认语言:" + navigator.systemLanguage + "<br>";
+            x = document.getElementById("p1");
+            p1.innerHTML = str;
+        }
+        function text1OnChange() {
+
+            y = document.getElementById("text1");
+            y.value = y.value.toUpperCase();
+        }
+        function mouseOver(arg1) {
+            arg1.innerHTML = "谢谢！"
+        }
+        function mouseOut(arg1) {
+            arg1.innerHTML = "请把鼠标移动到上面！"
+        }
+        function mouseDown(arg1) {
+            arg1.style.backgroundColor = "#1ec5e5";
+            arg1.innerHTML = "请释放鼠标按钮！"
+        }
+        function mouseUp(arg1) {
+
+            arg1.style.backgroundColor = "green";
+            arg1.innerHTML = "请点击鼠标！"
+        }
+        function text1Focus(obj) {
+            obj.style.backgroundColor = "yellow";
+        }
+        function text1Blur(obj) {
+            obj.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <p id="p1">我只是一个占位符</p>
+    <input type="text" id="text1" onchange="text1OnChange()" width="50" onfocus="text1Focus(this)"
+            onblur="text1Blur(this)"/>
+    <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" 
+         onmousedown="mouseDown(this)" onmouseup="mouseUp(this)"
+         style="background-color:green;width:120px;height:20px;padding:40px;color:white">
+        把鼠标移到上面
+    </div>
+</body>
+</html>

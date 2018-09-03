@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="MyWeb.WebTemp.Model.User,MyWeb.WebTemp.Model" table="Hksj_User" lazy="false">
+    <id name="Id" column="Id" type="Int32">
+      <generator class="native" />
+    </id>
+    <property name="Name" column="SName" type="String" length="20" />
+    <property name="NickName" column="SNickName" type="String" length="20" />
+    <property name="PassWord" column="SPassWord" type="String" length="30" />
+    <property name="IdentifyId" column="SIdentifyId" type="String" length="30" />
+    <property name="Phone" column="SPhone" type="String" length="50" />
+    <property name="Email" column="SEmail" type="String" length="50" />
+    <property name="CreateTime" column="DCreateDate" type="DateTime" />
+    <property name="Creator" column="SCreator" type="String" length="20" />
+    <property name="LastTimeLogOn" column="DLastTimeLogOn" type="DateTime" />
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,284 @@
+using System;
+using System.Runtime.Serialization;
+using System.Collections;
+
+namespace UFIDA.U8.UAP.Services.ReportElements
+{
+	/// <summary>
+	/// Cells 的摘要说明。
+	/// </summary>
+	[Serializable]
+	public class Cells : CollectionBase,IDisposable,ICloneable
+	{		
+		public event EventHandler BeforeAdd;
+		public Cell this[int index]
+		{
+			get {  return List[index] as Cell;  }
+		}
+
+		public Cell this[string colname]
+		{
+			get
+			{
+				for(int i=0;i<Count;i++)
+				{
+					Cell c=this[i];
+					if(c is IDataSource)
+					{
+						if((c as IDataSource).DataSource.Name.ToLower()==colname.ToLower())
+							return c;
+					}
+					if(c is ICalculateColumn )
+					{
+						if((c as ICalculateColumn).ColName.ToLower()==colname.ToLower())
+							return c;
+					}
+				}
+				return null;
+			}
+		}
+
+		public Cell GetByName(string name)
+		{
+			for(int i=0;i<Count;i++)
+			{
+				Cell c=this[i];
+				if(c.Name.ToLower()==name.ToLower())
+					return c;
+			}
+			return null;
+		}
+
+		private int _x=Int32.MaxValue;
+		private int _right=Int32.MinValue;
+		private int _y=Int32.MaxValue;
+		private int _bottom=Int32.MinValue;
+		public int Add( Cell value )  
+		{
+			if(value.X<_x)
+				_x=value.X;
+			if(value.X+value.Width>_right)
+				_right=value.X+value.Width;
+			if(value.Y<_y)
+				_y=value.Y;
+			if(value.Y+value.Height  >_bottom)
+				_bottom=value.Y+value.Height ;
+			AddArgs aa=new AddArgs();
+			if(BeforeAdd!=null)
+				BeforeAdd(value,aa);
+			if(aa.bAlreadyAdd)
+				return -1;
+			if(ServerReportContext.Environment!=Environment.Designtime )
+			{
+				for(int i=0;i<Count;i++)
+				{
+					if(value.X<this[i].X)
+					{
+						Insert(i,value);
+						return i;
+					}
+				}
+			}
+			else
+			{
+				for(int i=0;i<Count;i++)
+				{
+					if(value.Z_Order < this[i].Z_Order )
+					{
+						Insert(i,value);
+						return i;
+					}
+				}
+			}
+			return( List.Add( value ) );
+		}
+
+		public void AddALabel(Label label)
+		{
+			bool badded=false;
+			ArrayList removes=new ArrayList();
+			foreach(Cell c in this.InnerList )
+			{
+				if(label is SuperLabel && c.bUnder(label) && c is Label)
+				{
+					removes.Add(c);
+				}
+				if(c is SuperLabel && label.bUnder(c))
+				{
+					(c as SuperLabel).Labels.Add(label);
+					badded=true;
+					break;
+				}
+			}
+			if(removes.Count>0)
+			{
+				for(int i=0;i<removes.Count;i++)
+				{
+					Label ctmp=removes[i] as Label;
+					this.Remove(ctmp);
+					(label as SuperLabel).Labels.Add(ctmp);
+				}
+				this.Add(label);
+			}
+			else if(!badded)
+			{
+				this.Add(label);
+			}
+		}
+
+		public void CalcHeight()
+		{
+			_x=Int32.MaxValue;
+			_right=Int32.MinValue;
+			_y=Int32.MaxValue;
+			_bottom=Int32.MinValue;
+			foreach(Cell value in List)
+			{
+				if(value.X<_x)
+					_x=value.X;
+				if(value.X+value.Width>_right)
+					_right=value.X+value.Width;
+				if(value.Y<_y)
+					_y=value.Y;
+				if(value.Y+value.MetaHeight  >_bottom)
+					_bottom=value.Y+value.MetaHeight ;
+			}
+		}
+
+		public int IndexOf( Cell value )  
+		{
+			return( List.IndexOf( value ) );
+		}
+
+		public void Insert( int index, Cell value )  
+		{
+			List.Insert( index, value );
+		}
+
+		public void Remove( Cell value )  
+		{
+			if(Contains(value))
+				List.Remove( value );
+		}
+
+		public void RemoveCell( Cell value )  
+		{
+			int i=0;
+			while(i<Count)
+			{
+				if(this[i].Caption.ToLower()==value.Caption.ToLower())
+				{
+					List.Remove(this[i]);
+					break;
+				}
+				i++;
+			}
+		}
+
+		public bool Contains( Cell value )  
+		{
+			return( List.Contains( value ) );
+		}
+
+		public bool Contains( string name )  
+		{
+			if(GetByName(name)==null)
+				return false;
+			else
+				return true;
+		}
+
+		public void ReSetXRight()
+		{
+			if(Count>0)
+			{
+				_right=this[Count-1].X+this[Count-1].Width;
+				_x=this[0].X ;
+			}
+		}
+
+		public int Width
+		{
+			get
+			{
+				if(Count>0)
+				{
+					if(ServerReportContext.Environment==Environment.Runtime)
+					{
+						return this[Count-1].X+this[Count-1].Width-this[0].X ;
+					}
+					else
+						return _right-_x;
+				}
+				else
+					return 0;
+			}
+		}
+
+		public int X
+		{
+			get
+			{
+				if(Count>0)
+				{
+					if(ServerReportContext.Environment==Environment.Runtime)
+					{
+						return this[0].X;
+					}
+					else
+						return _x;
+				}
+				else
+					return 0;
+			}
+		}
+
+		public int Y
+		{
+			get
+			{
+				if(Count==0)
+					return 0;
+				return _y;
+			}
+		}
+
+		public int Height
+		{
+			get
+			{
+				if(Count==0)
+					return 0;
+				return _bottom-_y;
+			}
+		}
+		#region IDisposable 成员
+
+		public void Dispose()
+		{
+			foreach(Cell value in List)
+			{
+				if(value!=null)
+					((IDisposable)value).Dispose();
+			}
+			this.Clear();
+		}
+
+		#endregion
+
+		#region ICloneable 成员
+
+		public object Clone()
+		{
+			Cells cells=new Cells();
+			foreach(Cell value in List)
+			{
+				ServerReportContext.Log("Cloning "+ value.Name );
+				cells.Add(value.Clone() as Cell);
+			}
+			return cells;
+		}
+
+		#endregion
+	}
+}

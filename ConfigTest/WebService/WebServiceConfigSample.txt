@@ -1,0 +1,9 @@
+﻿ <webServices>
+    <!--authenticationType: NTLM,BASIC,NONE-->
+    <webService name="biService" baseUrl="http://127.0.0.1/webService" authenticationType="NTLM" userId="user" password="yourpassword">
+      <resource name="dept1" uri="api/Dept?dept1id={0}"/>
+      <resource name="dept2" uri="api/Dept?dept2id={0}"/>
+      <resource name="dept3" uri="api/Dept?dept3id={0}"/>
+      <resource name="dept4" uri="api/Dept?dept4id={0}"/>
+    </webService>
+  </webServices>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        var cars = new Array("car1", "car2", "car3");
+        var buss = new Array();
+        buss[0] = "bus1";
+        buss[1] = "dus2";
+        buss[2] = "aus3";
+        var totle = cars.concat(buss);
+        var s = totle.join();
+        document.write(s+"<br/>");
+        s = totle.join(".");
+        document.write(s + "<br/>");
+        document.write(totle = "<br/>");
+        document.write(buss.sort()+"<br/>");
+        var arr = new Array(6)
+        arr[0] = "10"
+        arr[1] = "5"
+        arr[2] = "40"
+        arr[3] = "25"
+        arr[4] = "1000"
+        arr[5] = "1"
+        function numSort(a,b) {
+            return a - b;
+        }
+        document.write(arr.sort(numSort)+"<br/>");
+        document.write(Math.round(0.38) + "<br/>");
+        document.write(Math.round(0.60) + "<br/>");
+        var patt1 = new RegExp("e", "g");
+        var string = "The best things in life are free";
+        do{
+            result=patt1.exec(string);
+            document.write(result +"<br/>");
+        }
+        while (result != null)
+        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        var x = document.getElementById("p1");
+        x.innerHTML = "浏览器内部窗口宽度：" + w + "<br/>" + "浏览器内部窗口高度：" + h + "<br/>";
+    </script>
+    <p id="p1"></p>
+</body>
+</html>

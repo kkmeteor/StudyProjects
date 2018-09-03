@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">这里是第一个段落</p>
+        <p id="p2">这里是第二个段落</p>
+        <input type="button" onclick="btnClick()" value="删除子元素" />
+    </div>
+    <script>
+        var para = document.createElement("p");
+        para.id = "p3";
+        var node = document.createTextNode("这里是新增加的段落");
+        para.onclick = function () { changeColor(para,"blue") };
+        para.appendChild(node);
+        var element = document.getElementById("div1");
+        element.appendChild(para);
+        var para1 = document.createElement("p");
+        para1.id = "p4";
+        node = document.createTextNode("这里是第二段增加的段落");
+        para1.appendChild(node);
+        para1.onclick = function () { changeColor(para1,"red") };
+        element.appendChild(para1);
+        function changeColor(para, arg) {
+            if (para.id == "p3")
+                element.removeChild(document.getElementById("p4"))
+            else
+                element.removeChild(document.getElementById("p3"))
+            para.style.color = arg;
+        }
+        function btnClick() {
+            var p = document.getElementById("p1");
+            p.parentNode.removeChild(p);
+        }
+    </script>
+</body>
+</html>
