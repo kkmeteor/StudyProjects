@@ -12,9 +12,9 @@ namespace TType
             AAA a = new AAA();
             Type type = a.GetType();
             var aaa = Create<AAA>("aaa");
-            aaa.AAAAAA();
+            Console.WriteLine(aaa.AAAAAA());
             var bbb = Create<BBB>("bbb");
-            bbb.BBBBBB();
+            Console.WriteLine(bbb.BBBBBB());
             Console.ReadKey();
 
         }
@@ -23,7 +23,7 @@ namespace TType
             return (T)Activator.CreateInstance(typeof(T), new object[] { connString });
         }
     }
-    public class AAA
+    public class AAA:Do
     {
         private string str;
         public AAA()
@@ -51,7 +51,7 @@ namespace TType
             return "BBB" + str;
         }
 
-        override void Do.Do()
+        protected override void Do1()
         {
             throw new NotImplementedException();
         }

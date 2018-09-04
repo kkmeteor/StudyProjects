@@ -46,7 +46,6 @@
   <ItemGroup>
     <Compile Include="BigBird.cs" />
     <Compile Include="Bird.cs" />
-    <Compile Include="Cat.cs" />
     <Compile Include="ExtentionMethods.cs" />
     <Compile Include="IFly.cs" />
     <Compile Include="Program.cs" />
