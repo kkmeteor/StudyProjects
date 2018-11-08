@@ -9,14 +9,25 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            //F1();
-            //F2();
-            //F3();
-            //F4();
-            F5();
+            F6();
             Console.ReadKey();
         }
-
+        public class Class1
+        {
+            int intValue = 1;
+            string strValue = "1";
+        }
+        private static  void F6()
+        {
+            List<int> intList = new List<int>();
+            Console.WriteLine(intList.Any());
+            intList.Add(1);
+            Console.WriteLine(intList.Any());
+            List<Class1> classList = new List<Class1>();
+            Console.WriteLine(classList.Any());
+            classList.Add(new Class1() { });
+            Console.WriteLine(classList.Any());
+        }
         private static void F5()
         {
             var list = FindNum();
