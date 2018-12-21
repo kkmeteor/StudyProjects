@@ -14,8 +14,20 @@ namespace ConsoleApplication1
         }
         public class Class1
         {
-            int intValue = 1;
-            string strValue = "1";
+            private static Class1 _instance;
+            readonly int intValue = 1;
+            readonly string strValue = "1";
+            private Class1(int intValue,string stringValue)
+            {
+                this.intValue = intValue;
+                this.strValue = stringValue;
+            }
+            public static Class1 GetInstance()
+            {
+                if (_instance == null)
+                    _instance = new Class1(1,"1");
+                return _instance;
+            }
         }
         private static  void F6()
         {
@@ -25,7 +37,7 @@ namespace ConsoleApplication1
             Console.WriteLine(intList.Any());
             List<Class1> classList = new List<Class1>();
             Console.WriteLine(classList.Any());
-            classList.Add(new Class1() { });
+            classList.Add(Class1.GetInstance());
             Console.WriteLine(classList.Any());
         }
         private static void F5()

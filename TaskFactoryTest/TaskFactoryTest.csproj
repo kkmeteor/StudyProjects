@@ -52,15 +52,6 @@
     <Reference Include="Beisen.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Beisen.Logging.1.1.0.17\lib\net35\Beisen.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Beisen.Recruiting.Core.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Beisen.Recruiting.Core.1.1.0.1083\lib\net45\Beisen.Recruiting.Core.Model.dll</HintPath>
-    </Reference>
-    <Reference Include="Beisen.Recruiting.Core.ServiceImp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Beisen.Recruiting.Core.1.1.0.1083\lib\net45\Beisen.Recruiting.Core.ServiceImp.dll</HintPath>
-    </Reference>
-    <Reference Include="Beisen.Recruiting.Core.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Beisen.Recruiting.Core.1.1.0.1083\lib\net45\Beisen.Recruiting.Core.ServiceInterface.dll</HintPath>
-    </Reference>
     <Reference Include="Beisen.SMSMailPlatformServices.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Beisen.SMSMailPlatformServices.ServiceInterface.1.1.0.37\lib\net45\Beisen.SMSMailPlatformServices.ServiceInterface.dll</HintPath>
     </Reference>

@@ -11,9 +11,6 @@ namespace DebugLogStudy
 {
     public partial class Form1 : Form
     {
-        private int time = 0;
-
-
         protected override void OnResize(EventArgs e)
         {
             //System.Diagnostics.Debug.Assert(this.Width > 200, "Width should be larger than 200.");
