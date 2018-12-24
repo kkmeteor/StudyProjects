@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExtensionMethods;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace IOCStudy
     {
         static void Main(string[] args)
         {
+            var timeOut = ConfigManager.ConfigManager.GetValue("TimeOut");
+            var intValue = timeOut.ToInt();
+            int intTimeOut = ConfigManager.ConfigManager.SafeGetIntValue(timeOut);
             var userService = UserService.Instance();
             
             Console.WriteLine(userService.Add(10));

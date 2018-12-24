@@ -23,5 +23,12 @@ namespace ExtensionMethods
             
             return true;
         }
+
+        public static int ToInt(this string value)
+        {
+            int o = 0;
+            int.TryParse(value, out o);
+            return o;
+        }
     }
 }

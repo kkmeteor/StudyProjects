@@ -37,6 +37,9 @@
     <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.3.2.0.0\lib\net40\Castle.Windsor.dll</HintPath>
     </Reference>
+    <Reference Include="ConfigManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ConfigManager.1.0.1\lib\net45\ConfigManager.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,6 +71,10 @@
     <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
       <Project>{9913da2c-3358-4ae7-a598-ae3bf217ea95}</Project>
       <Name>ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExtensionMethods\ExtensionMethods.csproj">
+      <Project>{e4239591-26e3-4ec2-b4d0-42b89b1f118a}</Project>
+      <Name>ExtensionMethods</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,6 +13,7 @@ namespace ExtensionMethods
             var guid = Guid.NewGuid();
             string s = "Hello world!,my dear";
             BigBird bb = new BigBird();
+            int a = s.ToInt();
             Console.WriteLine(bb.Run().ToString());
             Console.WriteLine(s.WordCount());
             Console.WriteLine(new Bird().Run());
