@@ -29,17 +29,13 @@ namespace TaskTest
             formatter.Serialize(ms, "aaaaaabbbbb");
             ms.Position = 0;
             string s1 = formatter.Deserialize(ms) as string;
+            Task cwt2 = cwt.ContinueWith(task => Console.WriteLine("The String is {0}", s1));
             Console.ReadKey();
         }
 
         private static string Get(string p)
         {
             return p.Substring(p.Length - 1, 1);
-        }
-
-        private static string GetLast(Task s, string p)
-        {
-            throw new NotImplementedException();
         }
 
         private static int GetInt(Task<string> i, int p)
@@ -54,11 +50,6 @@ namespace TaskTest
             return p.Substring(p.Length - 1, 1);
         }
 
-        private static void Sum(object state)
-        {
-            throw new NotImplementedException();
-        }
-
         private static string GetLast(string p)
         {
             return p.Substring(p.Length - 1, 1);
@@ -66,6 +57,7 @@ namespace TaskTest
 
         private static int Sum(int n)
         {
+            Thread.Sleep(5000);
             Int32 sum = 0;
             for (; n > 0; --n)
             {

@@ -13,6 +13,7 @@ namespace DelegateInvoke
         {
             var d = new MyAction(xxx);
             var asyncResult = d.BeginInvoke(2000, ad, d);
+            Console.WriteLine("委托内的方法正在执行中");
             //while (!asyncResult.AsyncWaitHandle.WaitOne(100, false))
             //{
             //    Console.Write("*");
@@ -27,13 +28,13 @@ namespace DelegateInvoke
         {
             if (ar == null) return;
             ABC result = (ar.AsyncState as MyAction).EndInvoke(ar);
-            string result1 = result.ToString();
-            Console.WriteLine("委托内的方法执行完毕了");
+            string result1 = result.result;
+            Console.WriteLine("委托内的方法执行完毕了"+ result1);
         }
 
         private static ABC xxx(int i)
         {
-            Thread.Sleep(1000);
+            Thread.Sleep(i);
             return new ABC();
         }
     }
