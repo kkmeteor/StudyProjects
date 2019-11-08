@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -9,6 +10,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
+            var result = Debugger.Launch();
             F6();
             Console.ReadKey();
         }
